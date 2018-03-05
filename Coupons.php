@@ -13,14 +13,18 @@ function get_content($URL){
 	$array=json_decode($JSON,true);
 	$searchlisting= $array["searchResult"]["searchListings"]["searchListing"];
 	foreach($searchlisting as $i){
-		if(isset($i['businessName'])&&$i['businessName']!==''&&isset($i['websiteURL'])&&$i['websiteURL']!==''){
+		if(isset($i['businessName'])&&$i['businessName']!==''&&isset($i['couponURL'])&&$i['couponURL']!==''){
 			$name= $i["businessName"];
-			$url= $i["websiteURL"];
+			$url= $i["couponURL"];
 			echo"&nbsp &nbsp<a href='$url'>$name </a><br>";
 		}
 		elseif(isset($i['businessName'])&&$i['businessName']!==''){
 			$name= $i["businessName"];
 			echo"&nbsp &nbsp $name<br>";
+		}
+		if(isset($i['websiteURL'])&&$i['websiteURL']!==''){
+			$website= $i["websiteURL"];
+			echo"<a href='$website'>Website </a><br>";
 		}
 		if(isset($i['city'])&&$i['city']!==''){
 			$city= $i["city"];
