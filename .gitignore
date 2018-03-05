@@ -26,6 +26,8 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+### properties file
+application.properties
 ### Windows template
 # Windows thumbnail cache files
 Thumbs.db
