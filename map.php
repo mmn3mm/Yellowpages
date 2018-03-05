@@ -16,7 +16,7 @@ if(!empty($_GET['id'])){
 	$array=json_decode($JSON,true);
 	if(isset($array['map_url'])&&$array['map_url']!==''){
 		$mapurl=$array['map_url'];
-		echo "<a href='$mapurl'>Map</a>";
+		echo "<img  src='$mapurl'>";
 	}
 	else{
 		echo"No MAP!.";
